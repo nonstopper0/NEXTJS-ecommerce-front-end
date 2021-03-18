@@ -1,0 +1,36 @@
+.product {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    margin: 10px;
+    display: flex;
+    border-radius: 40px;
+    overflow: hidden;
+
+    .col {
+        flex: 1;
+        color: black;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    
+        a {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        img {
+            min-height: 100%;
+        }
+    }
+}
