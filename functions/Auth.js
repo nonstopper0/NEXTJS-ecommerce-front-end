@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 export const AuthContext = createContext()
 
 export const AuthProvider = (props) => {
-    const [user, setUser] = useState({ email: 'yes'})
+    const [user, setUser] = useState()
     const router = useRouter()
 
 
@@ -19,7 +19,7 @@ export const AuthProvider = (props) => {
     }
 
     return (
-        <AuthContext.Provider value={{ user, login, logout}}>
+        <AuthContext.Provider value={{user, login, logout}}>
             {props.children}
         </AuthContext.Provider>
     )
