@@ -15,7 +15,7 @@ export default function Home({ products }) {
       { products.map((product) => 
       <div className="wrapper">
         <div className="product-img">
-          <img src={fromImgToUrl(product.image)} height="420" width="327"/>
+          <img src={fromImgToUrl(product.image)}/>
         </div>
         <div className="product-info">
           <div className="product-text">
@@ -24,7 +24,7 @@ export default function Home({ products }) {
             <p>{product.content}</p>
           </div>
           <div className="product-price-btn">
-            <p><span>78</span>$</p>
+            <p><span>{product.price}</span>$</p>
             <Link href={`products/${product.slug}`}><button type="button">buy now</button></Link>
           </div>
         </div>
