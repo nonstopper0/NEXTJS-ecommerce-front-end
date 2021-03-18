@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'
 
 export function fromImgToUrl(image) {
     if (!image) {
@@ -6,7 +6,6 @@ export function fromImgToUrl(image) {
     }
 
     if (image.url.indexOf("/") === 0) {
-        console.log(API_URL, image)
         return `${API_URL}${image.url}`
     }
 
