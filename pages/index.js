@@ -4,6 +4,7 @@ import { fromImgToUrl, twoDecimals, API_URL } from '../functions/functions'
 
 
 export default function Home({ products }) {
+  console.log(fromImgToUrl(products[0].image))
   return (
     <>
       <Head>
@@ -12,24 +13,24 @@ export default function Home({ products }) {
         <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet"/>
       </Head>
 
-      { products.map((product) => 
-      <div key={product.slug} className="wrapper">
-        <div className="product-img">
-          <img src={fromImgToUrl(product.image)}/>
-        </div>
-        <div className="product-info">
-          <div className="product-text">
-            <h1>{product.name}</h1>
-            <h2>by Nathaniel Redmon</h2>
-            <p>{product.content}</p>
+      <div className="products">
+        { products.map((product) => 
+        <div key={product.slug} className="wrapper">
+          <div className="product-img" style={{backgroundImage: `url("${fromImgToUrl(product.image)}")`}}></div>
+          <div className="product-info">
+            <div className="product-text">
+              <h3>{product.name}</h3>
+              <h4>by Nathaniel Redmon</h4>
+            </div>
+            <div className="product-price">
+              <p><span>{product.sizes["Small"].price}-{product.sizes["Large"].price}</span>$</p>
+              <Link href={`products/${product.slug}`}><button type="button">View Product</button></Link>
+            </div>
           </div>
-          <div className="product-price-btn">
-            <p><span>{product.sizes["Small"].price}-{product.sizes["Large"].price}</span>$</p>
-            <Link href={`products/${product.slug}`}><button type="button">buy now</button></Link>
-          </div>
         </div>
+        )}
       </div>
-      )}
+
     </>
   )
 }

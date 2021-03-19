@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 $dark: #222629 !default;
 $verydark: #16191b !default;
 $extremelydark: #101214 !default;
@@ -5,11 +7,11 @@ $navdark: #1f2325 !default;
 $medium: #474B4F !default;
 $light: #6B6E70 !default;
 $lighter: #b9b9b9 !default;
-$accent1: #da710f !default;
-$accent2: #c0731a !default;
+$accent1: #292929 !default;
+$accent2: rgb(214, 64, 64) !default;
 
-$button: blue !default;
-$buttonhover: black !default;
+$button: rgb(135, 185, 41) !default;
+$buttonhover: rgb(193, 236, 113) !default;
 
 
 @mixin phone {

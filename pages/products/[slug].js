@@ -24,10 +24,9 @@ export default function Product({ product }) {
                             <section className="top">
                                 <h1>{product.name}</h1>
                                 <h4>BY NATHANIEL REDMON</h4>
-                                <p>${price}</p>
+                                <p>${twoDecimals(price)}</p>
                             </section>
                             <section className="middle">
-                                <h4>DESCRIPTION</h4>
                                 <p>
                                     {product.content}
                                 </p>
