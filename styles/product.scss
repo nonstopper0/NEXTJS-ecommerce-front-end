@@ -1,3 +1,5 @@
+@import './theme.scss';
+
 .product-page {
 
     .row {
@@ -10,6 +12,11 @@
             margin: 0px;
             box-sizing: border-box;
             color: black;
+            
+            @include phone {
+                width: 100%;
+                min-width: none;
+            }
             
             .text {
                 display: flex;
@@ -38,6 +45,14 @@
                 }
 
                 .middle {
+                    margin: 20px 0px 20px 0px;
+                    h4 {
+                        margin-bottom: 0px;
+                    }
+
+                    p {
+                        margin-top: 0px;
+                    }
 
                 }
 
@@ -45,7 +60,7 @@
                     button {
                         height: 40px;
                         width: 156px;
-                        margin-right: 10px;
+                        margin: 20px 20px 20px 0px;
                         border: none;
                         border-radius: 60px;
                         font-family: 'Raleway', sans-serif;
@@ -54,9 +69,18 @@
                         text-transform: uppercase;
                         letter-spacing: 0.2em;
                         color: #ffffff;
-                        background-color: #9cebd5;
+                        background-color: $button;
                         cursor: pointer;
                         outline: none;
+
+                        &:hover {
+                            background-color: $buttonhover
+                        }
+
+                        @include phone {
+                            width: 90%;
+                            height: 50px;
+                        }
                     }
                 }
 
@@ -67,6 +91,7 @@
                         border: none;
                         height: 30px;
                         border-right: 1px solid rgba(0, 0, 0, 0.096);
+                        margin: 20px 0px 20px 0px;
                     }
                 }
             }
@@ -76,17 +101,26 @@
             flex: 1;
             min-width: 300px;
             height: 600px;
-            background-color: black;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+
+            @include phone {
+                width: 100%;
+                min-width: none;
+                height: 40vh;
+            }
     
             img {
                 flex-shrink: 0;
                 min-width: 100%;
                 min-height: 100%;
+
+                @include phone {
+                    
+                }
             }
         }
     }
@@ -209,12 +243,12 @@
         text-transform: uppercase;
         letter-spacing: 0.2em;
         color: #ffffff;
-        background-color: #9cebd5;
+        background-color: $button;
         cursor: pointer;
         outline: none;
     }
     
     .product-price-btn button:hover {
-        background-color: #79b0a1;
+        background-color: $buttonhover
     }
 }

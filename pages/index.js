@@ -4,7 +4,6 @@ import { fromImgToUrl, twoDecimals, API_URL } from '../functions/functions'
 
 
 export default function Home({ products }) {
-  console.log(products[0])
   return (
     <>
       <Head>

@@ -7,7 +7,6 @@ import { AuthContext } from '../functions/Auth'
 function nav() {
     const router = useRouter()
     const { user }  = useContext(AuthContext)
-    console.log(useContext(AuthContext))
   
     return (
         <nav>
@@ -17,7 +16,7 @@ function nav() {
                 <Link href="/">Products</Link>
                 { user ? (
                 <Link href="/account">
-                    {user.email}
+                    Account
                 </Link> 
                 ) : (
                 <Link href="/login">
