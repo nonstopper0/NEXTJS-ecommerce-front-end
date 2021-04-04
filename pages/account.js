@@ -18,7 +18,7 @@ function account() {
     return (
         <>
             <Head>
-                <title>Account Page</title>\
+                <title>Account Page</title>
                 <meta name="description" content="This is the account page, You can do all things related to changing account info here"/>
             </Head>
             <div>

@@ -10,7 +10,7 @@ function nav() {
   
     return (
         <nav>
-            <h1>Nathaniel Redmon</h1>
+            <h1>NATHANIEL REDMON</h1>
             <section>
                 <Link href="/">Home</Link>
                 <Link href="/">Products</Link>

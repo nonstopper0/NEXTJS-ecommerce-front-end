@@ -4,7 +4,6 @@ import { fromImgToUrl, twoDecimals, API_URL } from '../functions/functions'
 
 
 export default function Home({ products }) {
-  console.log(fromImgToUrl(products[0].image))
   return (
     <>
       <Head>
@@ -16,7 +15,9 @@ export default function Home({ products }) {
       <div className="products">
         { products.map((product) => 
         <div key={product.slug} className="wrapper">
-          <div className="product-img" style={{backgroundImage: `url("${fromImgToUrl(product.image)}")`}}></div>
+          <Link href={`products/${product.slug}`}>
+            <a className="product-img" style={{backgroundImage: `url("${fromImgToUrl(product.image)}")`}}></a>
+          </Link>
           <div className="product-info">
             <div className="product-text">
               <h3>{product.name}</h3>
@@ -24,7 +25,7 @@ export default function Home({ products }) {
             </div>
             <div className="product-price">
               <p><span>{product.sizes["Small"].price}-{product.sizes["Large"].price}</span>$</p>
-              <Link href={`products/${product.slug}`}><button type="button">View Product</button></Link>
+              {/* <Link href={`products/${product.slug}`}><button type="button">View</button></Link> */}
             </div>
           </div>
         </div>

@@ -9,12 +9,19 @@ nav {
     padding-bottom: 30px;
     background-color: $accent1;
 
-    active {
+    h1 {
+        letter-spacing: 5px;
 
+        @include phone {
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
     }
 
     a {
         margin: 10px;
         font-weight: bold;
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
     }
 }

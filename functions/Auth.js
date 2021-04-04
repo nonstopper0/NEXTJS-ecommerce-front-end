@@ -15,7 +15,7 @@ export const AuthProvider = (props) => {
 
     const logout = async () => {
         setUser(null)
-        router.push('/')
+        router.push('/') 
     }
 
     return (
